@@ -1,18 +1,31 @@
-#topbar {
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    background: black;
-    -webkit-transform: scale3d(1,1,1);
-    top: 0;
+
+.wrap {
+    padding-top:        50px;
+}
+
+h1, h2, h3, h4 {
+    margin:             25px 0;
+}
+
+.jumbotron {
+    padding:            1em;
+    margin-bottom:      0;
 }
 
 .page-header {
-    padding-top: 3em;
-    font-size: 1.25em;
+    margin-top:         1em;
+    margin-bottom:      0;
 }
 
-pre {
-    font-family: Menlo, Monaco, "Andale Mono", "Lucida Console", "Courier New", monospace !important;
-    padding: 0.5em;
+#sidebar_block {
+    padding:            1em;
+    background-color:   #eee;
+}
+
+.top-gutter {
+    margin-top:         1em;
+}
+
+.bottom-gutter {
+    margin-bottom:      1em;
 }

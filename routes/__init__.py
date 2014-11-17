@@ -4,6 +4,7 @@
 Main routes
 
 Created by: Rui Carmo
+(Updated by: António Lopes - bootstrap-bottle)
 License: MIT (see LICENSE for details)
 """
 import os, sys, logging
@@ -15,8 +16,8 @@ log = logging.getLogger()
 @view('home')
 def index():
     return {
-        "title": "Homepage",
-        "body": "Welcome to ink-bottle!"
+        "title": "Bootstrap-Bottle",
+        "body": "Welcome to the example page"
     }
 
 # import all other routes

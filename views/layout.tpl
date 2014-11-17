@@ -7,85 +7,90 @@
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <title>{{!title}}</title>
-        <link rel="shortcut icon" href="http://cdn.ink.sapo.pt/3.1.0/img/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" href="http://cdn.ink.sapo.pt/3.1.0/img/touch-icon.57.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://cdn.ink.sapo.pt/3.1.0/img/touch-icon.72.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://cdn.ink.sapo.pt/3.1.0/img/touch-icon.114.png">
-        <link rel="apple-touch-startup-image" href="http://cdn.ink.sapo.pt/3.1.0/img/splash.320x460.png" media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)">
-        <link rel="apple-touch-startup-image" href="http://cdn.ink.sapo.pt/3.1.0/img/splash.768x1004.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
-        <link rel="apple-touch-startup-image" href="http://cdn.ink.sapo.pt/3.1.0/img/splash.1024x748.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
 
-        <!-- load inks css from the cdn -->
-        <link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.1.0/css/ink-flex.min.css">
-        <link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.1.0/css/font-awesome.min.css">
-
+        <!-- Latest Bootstrap compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="/static/css/site.css">
-        
-        <!-- load inkxs css for IE8 -->
-        <!--[if lt IE 9 ]>
-            <link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.1.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <![endif]-->
-
-        <!-- test browser flexbox support and load legacy grid if unsupported -->
-        <script type="text/javascript" src="http://cdn.ink.sapo.pt/3.1.0/js/modernizr.js"></script>
-        <script type="text/javascript">
-            Modernizr.load({
-              test: Modernizr.flexbox,
-              nope : 'http://cdn.ink.sapo.pt/3.1.0/css/ink-legacy.min.css'
-            });
-        </script>
-
-%if defined('scripts'):
-    %for script in scripts:    
-        <script src="js/{{script}}"></script>
-    %end
-%end
-
-
     </head>
     <body>
         <!--[if lte IE 9 ]>
-        <div class="ink-alert basic" role="alert">
-            <button class="ink-dismiss">&times;</button>button>
-            <p>
-                <strong>You are using an outdated Internet Explorer version.</strong>strong>
-                Please <a href="http://browsehappy.com/">upgrade to a modern browser</a>a> to improve your web experience.
-            </p>p>
-        </div><div>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <strong>You are using an outdated Internet Explorer version.</strong>
+                Please <a href="http://browsehappy.com/">upgrade to a modern browser</a> to improve your web experience.
+            </div>
         -->
 
-        <div id="topbar">
-            <!-- Desktop navigation -->
-            <nav class="ink-navigation ink-grid ie7">
-                <ul class="menu horizontal flat black">
-                    <li class="title"><a href="/">Ink-bottle</a></li>
-                </ul>
-            </nav>
-            <!-- Mobile navigation -->
-            <nav class="ink-navigation ink-grid hide-all show-medium show-small">
-            </nav>
-            <div class="border">
-            </div>
-        </div>
-        </div>
-        <!-- TODO: masthead -->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Bootstrap-Bottle</a>
+                </div>
 
-        <!-- TODO: sidebar -->
-        <div id="page-content" class="ink-grid content-drawer">
-            <div class="page-header">
-              <h1 class="slab">{{!title}}</h1>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#"><i class="fa fa-cog"></i> Active <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#"><i class="fa fa-calendar"></i> Link 1</a></li>
+                        <li><a href="#"><i class="fa fa-group"></i> Link 2</a></li>
+                    </ul>
+
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i> Search</button>
+                    </form>
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <i class="fa fa-user"></i>
+                                Dropdown Menu <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">One Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+
+        <div class="wrap">
             {{!base}}
         </div>
-        <!-- TODO: footer
-        <div class="screen-size-helper">
-            <p class="title">Screen size:</h1>
-            <ul class="unstyled">
-                <li class="hide-medium hide-large show-small small">SMALL</li>
-                <li class="hide-small show-medium hide-large medium">MEDIUM</li>
-                <li class="hide-small hide-medium show-large large">LARGE</li>
-            </ul>
-        </div>
-        -->
+
+        <!-- TODO: footer -->
+
+        <!-- JQuery (required by Bootstrap javascript) -->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+        <!-- Latest Bootstrap compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+        %if defined('scripts'):
+            %for script in scripts:    
+                <script src="js/{{script}}"></script>
+            %end
+        %end
+
     </body>
 </html>

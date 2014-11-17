@@ -1,9 +1,11 @@
-ink-bottle
+bootstrap-bottle
 ==========
 
 A minimal skeleton for doing Bottle apps in a structured fashion (targeting Python 2.7 or above), meant as reference code for training sessions.
 
 Should be usable out of the box (even if it only displays one view).
+
+This is a fork from [@rcarmo](https://github.com/rcarmo "Rui Carmo's Github profile")'s [ink-bottle](https://github.com/rcarmo/ink-bottle "ink-bottle Github repository") replacing [Ink](http://ink.sapo.pt/) with [Bootstrap](http://getbootstrap.com/).
 
 ## Filesystem Layout
 
